@@ -21,7 +21,7 @@ Let's go through the approaches stepwise with example:
  * The three instances of the EmbedddingModel from the three images are shared instances of same model, i.e parameters are shared and are updated for the three paths simultaneously.
  
 ![Image1](https://github.com/sayan0506/Siamese-Network-Implementation-On-MNIST-Data-Using-Keras-/blob/master/Images/15b0d10f-3abe-4254-87dd-e3cb5ad93494.png)
-[source]()
+[source](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.oreilly.com%2Flibrary%2Fview%2Ftensorflow-1x-deep%2F9781788293594%2Fb109c39d-4c68-45e1-90de-c9c307498783.xhtml&psig=AOvVaw0cOwSuIK-S92-FLXL6xJEn&ust=1601333195400000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPCcxZu1iuwCFQAAAAAdAAAAABA2)
 
  The network architecture consists of three input images, are passes through a sequential network, which gives total 192 outputs(64 for each A, P, N type images) through a concatenated output layer. The Siamese Network structure is shown below:
  
