@@ -1,5 +1,8 @@
 # Siamese-Network-Implementation-On-MNIST-Data-Using-Keras-
 
+
+**Authors: [Sayan Hazra](https://github.com/sayan0506) & [Sankalpa Chowdhury](https://github.com/sankalpachowdhury)**
+
 # Siamese Network Approach
 
 The concept of **Siamese Network** and backpropagation using **Triplet Loss** approach was taken from [**FaceNet Paper**](https://arxiv.org/pdf/1503.03832.pdf)
