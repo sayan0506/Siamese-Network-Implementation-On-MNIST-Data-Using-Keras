@@ -47,3 +47,7 @@ Root mean square difference between Anchor and Positive examples in a batch of N
 * Our implementation also took a lot of inspiration from the official FaceNet github repository: https://github.com/davidsandberg/facenet 
 
 
+**All the contents are made public, and all modifications, pull requests are welcome but please open issue and discuss before executing any major change in the repository.**
+
+
+
