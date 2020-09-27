@@ -18,3 +18,49 @@ Let's go through the approaches stepwise with example:
 
  * All the three images are passed through the model and we get three embedding for the three images(Anchor, Positive, Negative) corresponding to each example.
  * The three instances of the EmbedddingModel from the three images are shared instances of same model, i.e parameters are shared and are updated for the three paths simultaneously.
+
+A loss function that tries to pull the Embeddings of Anchor and Positive Examples closer, and tries to push the Embeddings of Anchor and Negative Examples away from each other.
+
+Root mean square difference between Anchor and Positive examples in a batch of N images is:
+$
+\begin{equation}
+d_p = \sqrt{\frac{\sum_{i=0}^{N-1}(f(a_i) - f(p_i))^2}{N}}
+\end{equation}
+$
+
+Root mean square difference between Anchor and Negative examples in a batch of N images is:
+$
+\begin{equation}
+d_n = \sqrt{\frac{\sum_{i=0}^{N-1}(f(a_i) - f(n_i))^2}{N}}
+\end{equation}
+$
+
+For each example, we want:
+$
+\begin{equation}
+d_p \leq d_n
+\end{equation}
+$
+
+Therefore,
+$
+\begin{equation}
+d_p - d_n \leq 0
+\end{equation}
+$
+
+This condition is quite easily satisfied during the training.
+
+We will make it non-trivial by adding a margin (alpha):
+$
+\begin{equation}
+d_p - d_n + \alpha \leq 0
+\end{equation}
+$
+
+Given the condition above, the Triplet Loss L is defined as:
+$
+\begin{equation}
+L = max(d_p - d_n + \alpha, 0)
+\end{equation}
+$
