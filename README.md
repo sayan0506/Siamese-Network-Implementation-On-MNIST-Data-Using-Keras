@@ -20,9 +20,11 @@ Let's go through the approaches stepwise with example:
  * All the three images are passed through the model and we get three embedding for the three images(Anchor, Positive, Negative) corresponding to each example.
  * The three instances of the EmbedddingModel from the three images are shared instances of same model, i.e parameters are shared and are updated for the three paths simultaneously.
  
+[Image1](https://github.com/sayan0506/Siamese-Network-Implementation-On-MNIST-Data-Using-Keras-/blob/master/Images/15b0d10f-3abe-4254-87dd-e3cb5ad93494.png)
+
  The network architecture consists of three input images, are passes through a sequential network, which gives total 192 outputs(64 for each A, P, N type images) through a concatenated output layer. The Siamese Network structure is shown below:
  
-
+![Image2](https://github.com/sayan0506/Siamese-Network-Implementation-On-MNIST-Data-Using-Keras-/blob/master/Images/model.png)
 
 # Triplet Loss
 
