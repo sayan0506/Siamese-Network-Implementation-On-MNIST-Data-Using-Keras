@@ -18,8 +18,27 @@ Let's go through the approaches stepwise with example:
 
  * All the three images are passed through the model and we get three embedding for the three images(Anchor, Positive, Negative) corresponding to each example.
  * The three instances of the EmbedddingModel from the three images are shared instances of same model, i.e parameters are shared and are updated for the three paths simultaneously.
+ 
+ The network architecture consists of three input images, are passes through a sequential network, which gives total 192 outputs(64 for each A, P, N type images) through a concatenated output layer. The Siamese Network structure is shown below:
+ 
+
 
 # Triplet Loss
 
 A loss function that tries to pull the Embeddings of Anchor and Positive Examples closer, and tries to push the Embeddings of Anchor and Negative Examples away from each other.
-Root mean square difference between Anchor and Positive examples in a batch of N images are calculated in that loss.
+Root mean square difference between Anchor and Positive examples in a batch of N images are calculated in that loss. Based on that loss Siamese Network is backpropagated, and tuned using Adam optimization technique. 
+
+* The custom batches of triplets are created for training
+* Triplets are trained for 10 epochs and 2048 batches
+* After the training is done, 10 embeddings of 10 images corresponding to 10 digits are stores in a dictionary
+* Then, random images from test data are picked and recognized using a difference function with the help of a threshold
+* It performs with a decent accuracy, but more modification needed.
+
+* The details implementation and calculations can be found in the **[Collab Notebook](https://github.com/sayan0506/Siamese-Network-Implementation-On-MNIST-Data-Using-Keras-/blob/master/Create_a_Saimese_Network_with_Triplet_Loss_in_Keras.ipynb)**
+
+# Reference
+
+* The project is inspired from Convolution Neural Network course of [Deep Learning Specialization Coursera](https://www.coursera.org/learn/convolutional-neural-networks/) by **Prof. Andrew Ng**.
+
+
+
