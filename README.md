@@ -2,7 +2,8 @@
 
 # Siamese Network Approach
 
-The concept of **Siamese Network** and backpropagation using **Triplet Loss** approach was taken from **FaceNet Paper**, where it was immensely used for embedding of faces, where each face of the persons were pass through the model which gives 128 dimensional embedding array or an array of **128** values, which in turn compared with positive and negative image to calculate triplet losses and train the network model.
+The concept of **Siamese Network** and backpropagation using **Triplet Loss** approach was taken from [**FaceNet Paper**](https://arxiv.org/pdf/1503.03832.pdf)
+, where it was immensely used for embedding of faces, where each face of the persons were pass through the model which gives 128 dimensional embedding array or an array of **128** values, which in turn compared with positive and negative image to calculate triplet losses and train the network model.
 
 Let's go through the approaches stepwise with example:
 
@@ -39,6 +40,7 @@ Root mean square difference between Anchor and Positive examples in a batch of N
 # Reference
 
 * The project is inspired from Convolution Neural Network course of [Deep Learning Specialization Coursera](https://www.coursera.org/learn/convolutional-neural-networks/) by **Prof. Andrew Ng**.
-* - Florian Schroff, Dmitry Kalenichenko, James Philbin (2015). [FaceNet: A Unified Embedding for Face Recognition and Clustering](https://arxiv.org/pdf/1503.03832.pdf)
+* Florian Schroff, Dmitry Kalenichenko, James Philbin (2015). [FaceNet: A Unified Embedding for Face Recognition and Clustering](https://arxiv.org/pdf/1503.03832.pdf)
+* Our implementation also took a lot of inspiration from the official FaceNet github repository: https://github.com/davidsandberg/facenet 
 
 
