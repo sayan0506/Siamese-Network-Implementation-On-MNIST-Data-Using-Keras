@@ -39,6 +39,6 @@ Root mean square difference between Anchor and Positive examples in a batch of N
 # Reference
 
 * The project is inspired from Convolution Neural Network course of [Deep Learning Specialization Coursera](https://www.coursera.org/learn/convolutional-neural-networks/) by **Prof. Andrew Ng**.
-
+* - Florian Schroff, Dmitry Kalenichenko, James Philbin (2015). [FaceNet: A Unified Embedding for Face Recognition and Clustering](https://arxiv.org/pdf/1503.03832.pdf)
 
 
